@@ -473,7 +473,7 @@ $inputID=0;
 
 //input ID: $inputID?
 
-if (!isset($_hs_uid_base_data_cache[round($_POST['_hs_uid_data'])])) $_hs_uid_base_data_cache[round($_POST['_hs_uid_data'])]=='';
+if (!isset($_hs_uid_base_data_cache[round($_POST['_hs_uid_data'])])) $_hs_uid_base_data_cache[round($_POST['_hs_uid_data'])]='';
 if ($_hs_uid_base_data_cache[round($_POST['_hs_uid_data'])]==''){
 
 $input=array("input_UID"=>round($_POST['_hs_uid_data']),

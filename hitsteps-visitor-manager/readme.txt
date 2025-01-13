@@ -2,9 +2,9 @@
 Contributors: Hitsteps
 Tags: analytics, stats, statistics, chat, live, stat, visitor, monitor, heatmap, uptime, visitors, track, counter, online, visitors online,visitors online, count visitor, google analytics, analytics dashboard, visits, webstats, blog, today, yesterday, week, month, wp Statistics, hits, pagerank, woopra, clicky, statcounter, gosquared, mixpanel, histats, alexa, live visit, graph, traffic
 Requires at least: 2.7
-Tested up to: 6.4.3
+Tested up to: 6.7
 Requires PHP: 5.0
-Stable tag: 5.88
+Stable tag: 5.89
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: http://www.hitsteps.com/features.php#price
@@ -227,6 +227,9 @@ developers of this plugin.
 
 = 5.88 =
 * Update the endpoints
+
+= 5.89 =
+* Wordpress Compatibility update
 
 == Frequently Asked Questions ==
 

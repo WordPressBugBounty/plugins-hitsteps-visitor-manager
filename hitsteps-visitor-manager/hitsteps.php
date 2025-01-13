@@ -4,7 +4,7 @@ Plugin Name: Hitsteps Web Analytics
 Plugin URI: https://www.hitsteps.com/
 Description: Hitsteps is a powerful real time website visitor manager, it allow you to view and interact with your visitors in real time.
 Author: Hitsteps
-Version: 5.88
+Version: 5.89
 Author URI: http://www.hitsteps.com/
 */ 
 
@@ -59,7 +59,7 @@ $htssl='';
   }
   }
 
-?><!-- SNIPPET CODE<?php echo $htssl; ?> v5.88 - DO NOT CHANGE --><?php
+?><!-- SNIPPET CODE<?php echo $htssl; ?> v5.89 - DO NOT CHANGE --><?php
 
 
 if (is_search()){
@@ -1788,7 +1788,7 @@ $htssl=" - SSL";
                         echo $before_title . $title . $after_title; ?>
 
 <div style="text-align: center;" class="hs-wordpress-chat-placeholder">
-<!-- ONLINE SUPPORT CODE v5.88 - DO NOT CHANGE --><div id="hs-live-chat-pos"><script type="text/javascript">
+<!-- ONLINE SUPPORT CODE v5.89 - DO NOT CHANGE --><div id="hs-live-chat-pos"><script type="text/javascript">
 var hschatcs='www.';if (document.location.protocol=='https:') hschatcs='';hschatcsrc=document.location.protocol+'//edgecdn.dev/online?code=<?php echo $option['code']; ?>&lang=<?php echo urlencode($instance['lang']); ?>&img=<?php echo urlencode($instance['wd_img']); ?>&off=<?php echo urlencode($instance['wd_off']); ?>';
 document.write('<scri'+'pt type="text/javascript" src="'+hschatcsrc+'"></scr'+'ipt>');
 </script></div><!-- ONLINE SUPPORT CODE - DO NOT CHANGE -->
