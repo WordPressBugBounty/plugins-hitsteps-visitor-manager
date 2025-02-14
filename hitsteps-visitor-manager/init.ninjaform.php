@@ -48,7 +48,7 @@ public function ninja_forms_register_hitsteps_hook_process(){
 	$option=get_hst_conf();
 	if ($option['code']!=''){
 	if (isset($_POST['_hs_post_data'])&&round($_POST['_hs_post_data'])>0){
-	$input=array("input_UID"=>round($_POST['_hs_uid_data']),
+	$input=array("input_UID"=>round((int)$_POST['_hs_uid_data']),
 	"output_visitor_ip"=>round($_POST['_hs_data_output_visitor_ip']),
 	"output_visitor_path"=>round($_POST['_hs_data_output_visitor_path']),
 	"output_visitor_base"=>round($_POST['_hs_data_output_visitor_base']),

@@ -4,7 +4,7 @@ Tags: analytics, stats, statistics, chat, live, stat, visitor, monitor, heatmap,
 Requires at least: 2.7
 Tested up to: 6.7
 Requires PHP: 5.0
-Stable tag: 5.89
+Stable tag: 5.90
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Donate link: http://www.hitsteps.com/features.php#price

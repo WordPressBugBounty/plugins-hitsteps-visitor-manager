@@ -159,7 +159,7 @@ function wpcf7_tg_pane_hitsteps_cf7( $type = 'hitsteps_cf7' ) {
 	
 	
 	
-	$input=array("input_UID"=>round($_POST['_hs_uid_data']),
+	$input=array("input_UID"=>round((int)$_POST['_hs_uid_data']),
 	"output_visitor_ip"=>round($_POST['_hs_data_output_visitor_ip']),
 	"output_visitor_path"=>round($_POST['_hs_data_output_visitor_path']),
 	"output_visitor_base"=>round($_POST['_hs_data_output_visitor_base']),

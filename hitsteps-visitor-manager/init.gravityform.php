@@ -461,7 +461,7 @@ if (!class_exists('HITSTEPS_GFRD_hitsteps')){
 function _hits_gf_pre_submission_raw( $form ) {
 global $_POST, $_hs_uid_data_cache_raw;
 if (!isset($_POST['_hs_uid_data'])) $_POST['_hs_uid_data']=0;
-if (round($_POST['_hs_uid_data'])>0){
+if (round((int)$_POST['_hs_uid_data'])>0){
 
 //get hitstep's field input ID in gravity form
 $inputID=0;
@@ -473,20 +473,20 @@ $inputID=0;
 
 //input ID: $inputID?
 
-if (!isset($_hs_uid_base_data_cache[round($_POST['_hs_uid_data'])])) $_hs_uid_base_data_cache[round($_POST['_hs_uid_data'])]='';
-if ($_hs_uid_base_data_cache[round($_POST['_hs_uid_data'])]==''){
+if (!isset($_hs_uid_base_data_cache[round((int)$_POST['_hs_uid_data'])])) $_hs_uid_base_data_cache[round((int)$_POST['_hs_uid_data'])]='';
+if ($_hs_uid_base_data_cache[round((int)$_POST['_hs_uid_data'])]==''){
 
-$input=array("input_UID"=>round($_POST['_hs_uid_data']),
+$input=array("input_UID"=>round((int)$_POST['_hs_uid_data']),
 	"output_visitor_ip"=>0,
 	"output_visitor_path"=>0,
 	"output_visitor_base"=>1,
 	"output_visitor_baseraw"=>1,
 	"output_visitor_link"=>0
 	);
-	$_hs_uid_base_data_cache[round($_POST['_hs_uid_data'])]=_hs_contact_form_query_base_raw($input);
+	$_hs_uid_base_data_cache[round((int)$_POST['_hs_uid_data'])]=_hs_contact_form_query_base_raw($input);
 }
 
-$_POST['input_'.$inputID]=$_hs_uid_base_data_cache[round($_POST['_hs_uid_data'])];
+$_POST['input_'.$inputID]=$_hs_uid_base_data_cache[round((int)$_POST['_hs_uid_data'])];
 
 
 }
@@ -514,7 +514,7 @@ function _hits_gf_pre_submission( $form ) {
 
 global $_POST, $_hs_uid_data_cache;
 if (!isset($_POST['_hs_uid_data'])) $_POST['_hs_uid_data']=0;
-if (round($_POST['_hs_uid_data'])>0){
+if (round((int)$_POST['_hs_uid_data'])>0){
 
 //get hitstep's field input ID in gravity form
 $inputID=0;
@@ -525,16 +525,16 @@ $inputID=0;
 
 //input ID: $inputID?
 
-if (!isset($_hs_uid_data_cache[round($_POST['_hs_uid_data'])])) $_hs_uid_data_cache[round($_POST['_hs_uid_data'])]=='';
-if ($_hs_uid_data_cache[round($_POST['_hs_uid_data'])]==''){
+if (!isset($_hs_uid_data_cache[round((int)$_POST['_hs_uid_data'])])) $_hs_uid_data_cache[round((int)$_POST['_hs_uid_data'])]=='';
+if ($_hs_uid_data_cache[round((int)$_POST['_hs_uid_data'])]==''){
 
-$input=array("input_UID"=>round($_POST['_hs_uid_data']),
+$input=array("input_UID"=>round((int)$_POST['_hs_uid_data']),
 	"output_visitor_ip"=>round($_POST['_hs_data_output_visitor_ip']),
 	"output_visitor_path"=>round($_POST['_hs_data_output_visitor_path']),
 	"output_visitor_base"=>round($_POST['_hs_data_output_visitor_base']),
 	"output_visitor_link"=>round($_POST['_hs_data_output_visitor_link'])
 	);
-	$_hs_uid_data_cache[round($_POST['_hs_uid_data'])]=_hs_contact_form_query($input);
+	$_hs_uid_data_cache[round((int)$_POST['_hs_uid_data'])]=_hs_contact_form_query($input);
 }
 
 $_POST['input_'.$inputID]="Hitsteps Analytics only visible inside Notification Email.";
@@ -551,21 +551,21 @@ global $_POST, $_hs_uid_data_cache;
 if (!isset($_POST['_hs_uid_data'])) $_POST['_hs_uid_data']=0;
 if (isset($_POST['_hs_post_data'])&&round($_POST['_hs_post_data'])>0){
 
-if (!isset($_hs_uid_data_cache[round($_POST['_hs_uid_data'])])) $_hs_uid_data_cache[round($_POST['_hs_uid_data'])]=='';
-if ($_hs_uid_data_cache[round($_POST['_hs_uid_data'])]==''){
+if (!isset($_hs_uid_data_cache[round((int)$_POST['_hs_uid_data'])])) $_hs_uid_data_cache[round((int)$_POST['_hs_uid_data'])]=='';
+if ($_hs_uid_data_cache[round((int)$_POST['_hs_uid_data'])]==''){
 
 
-$input=array("input_UID"=>round($_POST['_hs_uid_data']),
+$input=array("input_UID"=>round((int)$_POST['_hs_uid_data']),
     "output_visitor_ip"=>round($_POST['_hs_data_output_visitor_ip']),
     "output_visitor_path"=>round($_POST['_hs_data_output_visitor_path']),
     "output_visitor_base"=>round($_POST['_hs_data_output_visitor_base']),
     "output_visitor_link"=>round($_POST['_hs_data_output_visitor_link'])
     );
-    $_hs_uid_data_cache[round($_POST['_hs_uid_data'])]=_hs_contact_form_query($input);
+    $_hs_uid_data_cache[round((int)$_POST['_hs_uid_data'])]=_hs_contact_form_query($input);
 
 }
 
-$email['message']=str_replace("Hitsteps Analytics only visible inside Notification Email.",$_hs_uid_data_cache[round($_POST['_hs_uid_data'])],$email['message']);
+$email['message']=str_replace("Hitsteps Analytics only visible inside Notification Email.",$_hs_uid_data_cache[round((int)$_POST['_hs_uid_data'])],$email['message']);
 }
 
 
@@ -832,7 +832,7 @@ function _hits_gf_pre_submission_last( $form ) {
 global $_POST, $_hs_uid_data_cache_raw;
 
 if (!isset($_POST['_hs_uid_data'])) $_POST['_hs_uid_data']=0;
-if (round($_POST['_hs_uid_data'])>0){
+if (round((int)$_POST['_hs_uid_data'])>0){
 
 //get hitstep's field input ID in gravity form
 $inputID=0;
@@ -843,10 +843,10 @@ $inputID=0;
 
 //input ID: $inputID?
 
-if (!isset($_hs_uid_last_data_cache_raw[round($_POST['_hs_uid_data'])])) $_hs_uid_last_data_cache_raw[round($_POST['_hs_uid_data'])]=='';
-if ($_hs_uid_last_data_cache_raw[round($_POST['_hs_uid_data'])]==''){
+if (!isset($_hs_uid_last_data_cache_raw[round((int)$_POST['_hs_uid_data'])])) $_hs_uid_last_data_cache_raw[round((int)$_POST['_hs_uid_data'])]=='';
+if ($_hs_uid_last_data_cache_raw[round((int)$_POST['_hs_uid_data'])]==''){
 
-$input=array("input_UID"=>round($_POST['_hs_uid_data']),
+$input=array("input_UID"=>round((int)$_POST['_hs_uid_data']),
     "output_visitor_ip"=>0,
     "output_visitor_path"=>0,
     "output_visitor_base"=>0,
@@ -857,10 +857,10 @@ $input=array("input_UID"=>round($_POST['_hs_uid_data']),
 
 
 
-    $_hs_uid_last_data_cache_raw[round($_POST['_hs_uid_data'])]=_hs_contact_form_query_base_raw($input);
+    $_hs_uid_last_data_cache_raw[round((int)$_POST['_hs_uid_data'])]=_hs_contact_form_query_base_raw($input);
 }
 
-$_POST['input_'.$inputID]=$_hs_uid_last_data_cache_raw[round($_POST['_hs_uid_data'])];
+$_POST['input_'.$inputID]=$_hs_uid_last_data_cache_raw[round((int)$_POST['_hs_uid_data'])];
 
 
 }

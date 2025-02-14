@@ -59,7 +59,7 @@ global $_POST;
 
 
 if (isset($_POST['_hs_post_data'])&&round($_POST['_hs_post_data'])>0){
-	$input=array("input_UID"=>round($_POST['_hs_uid_data']),	"output_visitor_ip"=>1,	"output_visitor_path"=>1,	"output_visitor_base"=>1,	"output_visitor_link"=>1
+	$input=array("input_UID"=>round((int)$_POST['_hs_uid_data']),	"output_visitor_ip"=>1,	"output_visitor_path"=>1,	"output_visitor_base"=>1,	"output_visitor_link"=>1
 	);
 
 		$msg.="\n\n". _hs_contact_form_query_plain($input);
