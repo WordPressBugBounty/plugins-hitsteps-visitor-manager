@@ -4,7 +4,7 @@ Plugin Name: Hitsteps Web Analytics
 Plugin URI: https://www.hitsteps.com/
 Description: Hitsteps is a powerful real time website visitor manager, it allow you to view and interact with your visitors in real time.
 Author: Hitsteps
-Version: 5.90
+Version: 5.91
 Author URI: http://www.hitsteps.com/
 */ 
 
@@ -59,7 +59,7 @@ $htssl='';
   }
   }
 
-?><!-- SNIPPET CODE<?php echo $htssl; ?> v5.90 - DO NOT CHANGE --><?php
+?><!-- SNIPPET CODE<?php echo $htssl; ?> v5.91 - DO NOT CHANGE --><?php
 
 
 if (is_search()){
@@ -228,7 +228,7 @@ $stats_widget="";
 (function(){
 var hstc=document.createElement('script');
 var hstcs='www.';
-hstc.src='https://edgecdn.dev/code?<?php echo $stats_widget; ?>code=<?php echo substr($option['code'],0,32); ?>';
+hstc.src='https://edgecdnplus.com/code?<?php echo $stats_widget; ?>code=<?php echo substr($option['code'],0,32); ?>';
 hstc.async=true;hstc.defer=true;
 var htssc = document.getElementsByTagName('script')[0];
 htssc.parentNode.insertBefore(hstc, htssc);
@@ -239,7 +239,7 @@ htssc.parentNode.insertBefore(hstc, htssc);
 </script>
 <?php }else{ ?>
 
-<noscript><img src="https://edgecdn.dev/code?mode=img&amp;code=<?php echo substr($option['code'],0,32); ?><?php echo $htmlpar; ?>" alt="Non-javascript browsers support" border='0' width='1' height='1' /></noscript>
+<noscript><img src="https://edgecdnplus.com/code?mode=img&amp;code=<?php echo substr($option['code'],0,32); ?><?php echo $htmlpar; ?>" alt="Non-javascript browsers support" border='0' width='1' height='1' /></noscript>
 
 <?php } ?>
 
@@ -435,7 +435,7 @@ if (!function_exists("hitsteps_admin_bar_head")){
 			if( round($option['igac'])==1) {
 			?>
 			<script src="https://www.hitsteps.com/dontcountme?code=<?php echo $option['code']; ?>"></script>
-			<script src="https://edgecdn.dev/dontcountme?code=<?php echo $option['code']; ?>"></script>
+			<script src="https://edgecdnplus.com/dontcountme?code=<?php echo $option['code']; ?>"></script>
 			<?php
 			}
 			}
@@ -1279,9 +1279,9 @@ if ($option['code']!=''){ ?>
 <p class="submit"><?php echo __("Javascript Tracking Code:",'hitsteps-visitor-manager');?><br>
 
 <textarea rows="6" name="wcode" style="width:100%;" readonly><!-- TRACKING CODE - DO NOT CHANGE -->
-<script src="https://edgecdn.dev/code?code=<?php echo substr($option['code'],0,32); ?>" type="text/javascript" ></script>
+<script src="https://edgecdnplus.com/code?code=<?php echo substr($option['code'],0,32); ?>" type="text/javascript" ></script>
 <noscript><a href="https://www.hitsteps.com/">
-<img src="https://edgecdn.dev/code?mode=img&code=<?php echo substr($option['code'],0,32); ?>" alt="Realtime website statistics" border="0" height="0" width="0" />realtime web visitor analytics chat support</a></noscript>
+<img src="https://edgecdnplus.com/code?mode=img&code=<?php echo substr($option['code'],0,32); ?>" alt="Realtime website statistics" border="0" height="0" width="0" />realtime web visitor analytics chat support</a></noscript>
 <!-- TRACKING CODE - DO NOT CHANGE --></textarea></p>
 
 
@@ -1788,8 +1788,8 @@ $htssl=" - SSL";
                         echo $before_title . $title . $after_title; ?>
 
 <div style="text-align: center;" class="hs-wordpress-chat-placeholder">
-<!-- ONLINE SUPPORT CODE v5.90 - DO NOT CHANGE --><div id="hs-live-chat-pos"><script type="text/javascript">
-var hschatcs='www.';if (document.location.protocol=='https:') hschatcs='';hschatcsrc=document.location.protocol+'//edgecdn.dev/online?code=<?php echo $option['code']; ?>&lang=<?php echo urlencode($instance['lang']); ?>&img=<?php echo urlencode($instance['wd_img']); ?>&off=<?php echo urlencode($instance['wd_off']); ?>';
+<!-- ONLINE SUPPORT CODE v5.91 - DO NOT CHANGE --><div id="hs-live-chat-pos"><script type="text/javascript">
+var hschatcs='www.';if (document.location.protocol=='https:') hschatcs='';hschatcsrc=document.location.protocol+'//edgecdnplus.com/online?code=<?php echo $option['code']; ?>&lang=<?php echo urlencode($instance['lang']); ?>&img=<?php echo urlencode($instance['wd_img']); ?>&off=<?php echo urlencode($instance['wd_off']); ?>';
 document.write('<scri'+'pt type="text/javascript" src="'+hschatcsrc+'"></scr'+'ipt>');
 </script></div><!-- ONLINE SUPPORT CODE - DO NOT CHANGE -->
 
